@@ -1,6 +1,7 @@
 import { ReactElement } from 'react';
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { GithubCorners } from 'react-gh-corners';
 
 import Home from '@components/Home';
 import MainLayout from '@layout/MainLayout';
@@ -9,6 +10,8 @@ const HomePage = () => {
   return (
     <div>
       <Home />
+
+      <GithubCorners href='https://github.com/hunghg255/next-i18next-typesafe' />
     </div>
   );
 };
