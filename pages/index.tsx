@@ -11,7 +11,7 @@ const HomePage = () => {
     <div>
       <Home />
 
-      <GithubCorners href='https://github.com/hunghg255/next-i18next-typesafe' />
+      <GithubCorners href='next-i18next-typesafe-demo.vercel.app' />
     </div>
   );
 };
