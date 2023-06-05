@@ -1,0 +1,65 @@
+{
+  "name": "next-i-18-next-demo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev-next\" \"npm run next-i18next-typesafe\"",
+    "dev-next": "env-cmd -f .env.development next dev",
+    "build": "next build",
+    "start": "env-cmd -f .env.production next start",
+    "lint": "next lint",
+    "analyze": "cross-env ANALYZE=true next build",
+    "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
+    "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build",
+    "prepare": "husky install",
+    "next-i18next-typesafe": "next-i18next-typesafe -w"
+  },
+  "dependencies": {
+    "@next/font": "^13.2.4",
+    "ahooks": "^3.5.1",
+    "brainless-token-manager": "^1.2.6",
+    "classnames": "^2.3.1",
+    "cookies-next": "^2.1.1",
+    "dayjs": "^1.11.4",
+    "jotai": "^2.0.0",
+    "next": "^13.2.4",
+    "next-i18next": "^11.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sharp": "^0.30.7",
+    "umi-request": "^1.4.0"
+  },
+  "devDependencies": {
+    "@hunghg255/eslint-config-react": "^0.0.6",
+    "@next/bundle-analyzer": "^12.2.1",
+    "@total-typescript/ts-reset": "^0.4.2",
+    "@types/node": "18.7.16",
+    "@types/react": "18.0.18",
+    "@types/react-dom": "18.0.6",
+    "autoprefixer": "^10.4.14",
+    "concurrently": "^8.1.0",
+    "cross-env": "^7.0.3",
+    "env-cmd": "^10.1.0",
+    "eslint": "8.23.0",
+    "eslint-config-next": "12.3.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.3",
+    "next-i18next-typesafe": "^1.0.3",
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.8",
+    "sass": "^1.54.9",
+    "tailwindcss": "^3.2.7",
+    "typescript": "4.8.3"
+  },
+  "browserslist": [
+    ">0.3%",
+    "not ie 11",
+    "not dead",
+    "not op_mini all"
+  ],
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "npm run lint"
+    ]
+  }
+}
